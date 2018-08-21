@@ -3,10 +3,12 @@ MAINTAINER Corbin Uselton <corbinu@decimal.io>
 
 ENV TERM xterm
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  openssh-server \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get -yq install openssh-server; \
-  mkdir -p /var/run/sshd; \
+RUN mkdir -p /var/run/sshd; \
   mkdir /root/.ssh && chmod 700 /root/.ssh; \
   touch /root/.ssh/authorized_keys
 
