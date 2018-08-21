@@ -4,7 +4,7 @@ set -e
 
 if [ "$1" = 'ssh-server' ]
 then
-    /usr/sbin/sshd -D
+    exec /usr/sbin/sshd -D
 fi
 
 exec "$@"
