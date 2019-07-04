@@ -1,3 +1,5 @@
+*This is no longer being mantained if anybody wants to take over I would welcome it thanks!*
+
 # SSH Server
 
 Docker container for running OpenSSH server. Can be used in combination with [sshuttle](https://github.com/sshuttle/sshuttle) for creating a secure network connection to a docker cluster
